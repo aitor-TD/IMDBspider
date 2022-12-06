@@ -21,7 +21,7 @@ class ImdbSpider(scrapy.Spider):
         next_href = next_page[0]
         link = self.initial_url + next_href
         self.indice += 1
-        if self.indice < 1:
+        if self.indice < 15:
             yield scrapy.Request(link, callback=self.parse)
 
 
